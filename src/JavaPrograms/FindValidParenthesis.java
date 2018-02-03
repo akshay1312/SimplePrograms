@@ -29,7 +29,7 @@ public class FindValidParenthesis
             }
         }
 
-        System.out.print("String reverse of Akshay is :: " + counter);
+        System.out.print("Number Of valid parenthesis are :: " + counter);
     }
 
 }
