@@ -19,6 +19,7 @@ public class ArrayProblem1 {
     Integer[] list = { 1, 7, 3, 4 };
     Integer[] result = new Integer[list.length];
 
+    // first solution
     for (int i = 0; i < list.length; i++) {
       int temp = 1;
       for (int j = 0; j < list.length; j++) {
@@ -29,6 +30,7 @@ public class ArrayProblem1 {
       }
     }
 
+    // second solution
     for (int i = 0,j=0; i < list.length; i++) {
       int temp = 1;
         if (i != j) {

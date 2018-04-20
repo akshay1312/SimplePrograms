@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.sorting;
 
 /**
  * Created by apitale on 2018-01-31.

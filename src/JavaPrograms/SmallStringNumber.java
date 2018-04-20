@@ -1,5 +1,7 @@
 package JavaPrograms;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -53,6 +55,7 @@ public class SmallStringNumber {
     }
     return generateLowestNumber(newStr, num -1);
   }
+
 
   static int getNum(final String str, final int index) {
     return Character.getNumericValue(str.charAt(index));

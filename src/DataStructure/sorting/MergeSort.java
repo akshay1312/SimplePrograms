@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.sorting;
 
 /**
  * Created by Akshay1312 on 11/15/2015.

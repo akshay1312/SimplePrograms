@@ -1,7 +1,5 @@
 package JavaPrograms;
 
-import java.util.Arrays;
-
 /**
  * Created by Akshay1312 on 11/15/2015.
  */
