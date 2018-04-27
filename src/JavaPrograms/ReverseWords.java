@@ -1,5 +1,6 @@
 package JavaPrograms;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -34,6 +35,19 @@ public class ReverseWords {
     return result;
   }
 
+  public static String reverseWords2(String s) {
+    String[] wordArray =  s.split(" ");
+    int left = 0, right = wordArray.length - 1;
+    while(left < right) {
+      String temp = wordArray[left];
+      wordArray[left] = wordArray[right];
+      wordArray[right] = temp;
+      left ++;
+      right --;
+    }
+    return Arrays.toString(wordArray);
+  }
+
   public static void main(String[] args) {
     // run your function through some test cases here
     // remember: debugging is half the battle!
@@ -41,6 +55,9 @@ public class ReverseWords {
         'p', 'o', 'u', 'n', 'd', ' ',
         's', 't', 'e', 'a', 'l' };
     String s = reverseWords("Akshay here how are you");
+    System.out.println("s :: " + s);
+    String s2 = reverseWords2("Akshay here how are you");
+    System.out.println("s2 :: " + s2);
     System.out.println(reverseWords(message));
   }
 }

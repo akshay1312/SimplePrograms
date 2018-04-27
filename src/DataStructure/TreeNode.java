@@ -5,9 +5,9 @@ package DataStructure;
  */
 public class TreeNode
 {
-    private int data;
-    private TreeNode left;
-    private TreeNode right;
+    int data;
+    TreeNode left;
+    TreeNode right;
 
     public TreeNode()
     {

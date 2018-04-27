@@ -46,7 +46,7 @@ public class MergeLinkedList {
 
     // merge two sorted linkedlist in decreasing order
     result = list.sortedmerge(a, b);
-    result = list.sortedmerge2(a, b);
+    //result = list.sortedmerge2(a, b);
     System.out.println("");
     System.out.println("Merged linked list : ");
     list.printlist(result);
@@ -67,16 +67,14 @@ public class MergeLinkedList {
     if(node2 == null) {
       return node1;
     }
-    Node result = null;
+    Node result;
       if(node1.data < node2.data) {
         result = node1;
         result.next = sortedmerge(node1.next, node2);
-      } else if(node1.data > node2.data) {
+      } else {
         result = node2;
         result.next = sortedmerge(node1, node2.next);
-      } else {
-        return result;
-    }
+      }
     return result;
   }
 

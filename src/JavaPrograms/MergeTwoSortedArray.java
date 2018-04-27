@@ -1,5 +1,9 @@
 package JavaPrograms;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Akshay1312 on 11/13/2015.
  */
@@ -22,6 +26,9 @@ public class MergeTwoSortedArray {
     while (j >= 0)
       s1[x--] = s2[j--];
 
-    System.out.print("Merge and sorted array : " + s1);
+    System.out.print("Merge and sorted array : " );
+    Arrays.stream(s1).forEach(System.out::println);
+    Map<Integer, Integer> map = new HashMap<>();
+    map.entrySet().forEach(System.out::println);
   }
 }

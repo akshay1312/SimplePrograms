@@ -6,7 +6,7 @@ package JavaPrograms;
 public class roamToInt {
 
   public static void main (String args[]) {
-    System.out.println("output :: " + romanToInt("IX"));
+    System.out.println("output :: " + romanToInt("DXXXVI"));
   }
   public static int romanToInt(String s) {
     int nums[]=new int[s.length()];
