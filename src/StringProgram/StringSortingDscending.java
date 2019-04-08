@@ -1,4 +1,4 @@
-package SapientQuestions;
+package StringProgram;
 
 /**
  * Created by apitale on 2018-04-17.
