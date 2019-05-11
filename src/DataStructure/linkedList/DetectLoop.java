@@ -35,7 +35,7 @@ public class DetectLoop {
       slow_p = slow_p.next;
       fast_p = fast_p.next.next;
       if (slow_p == fast_p) {
-        System.out.println("Found loop");
+        System.out.println("Found loop :: " + slow_p.data);
         return 1;
       }
     }

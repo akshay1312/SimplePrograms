@@ -5,7 +5,7 @@ import DataStructure.Node;
 /**
  * Created by Akshay1312 on 11/13/2015.
  */
-public class SingleLinkList {
+public class    SingleLinkList {
   private Node head;
   private int size;
 

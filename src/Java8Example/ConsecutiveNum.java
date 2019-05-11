@@ -9,7 +9,7 @@ package Java8Example;
  *
  * @author akshay Date 2019-04-07 11:47
  */
-public class ConsecutiveNub {
+public class ConsecutiveNum {
 
 
   public static void main(String args[]) {
