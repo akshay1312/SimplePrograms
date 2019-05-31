@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.tree;
 
 /**
  * Created by apitale on 2018-04-27.

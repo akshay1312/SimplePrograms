@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.tree;
 
 /**
  * Created by Akshay1312 on 11/13/2015.

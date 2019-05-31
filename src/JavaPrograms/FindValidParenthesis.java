@@ -10,7 +10,7 @@ public class FindValidParenthesis
 
     public static void main (String args[])
     {
-        String s1 = ")()())";
+        String s1 = "()";
         char[] ch = s1.toCharArray();
         Stack<Integer> parenthesis = new Stack<>();
         parenthesis.push(-1);
@@ -30,6 +30,27 @@ public class FindValidParenthesis
         }
 
         System.out.print("Number Of valid parenthesis are :: " + counter);
+        System.out.print("is valid :: " + isValid(s1));
     }
+
+
+    public static  boolean isValid(String s) {
+        char[] charStr = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for(char c : charStr) {
+            if(c == '(' || c=='{' || c == '[') {
+                stack.push(c);
+            } else if(c == ')' || c == ']' || c == '}') {
+                stack.pop();
+            }
+        }
+
+        if(stack.isEmpty()) {
+            return true;
+        }
+        return false;
+    }
+
+
 
 }

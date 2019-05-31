@@ -19,9 +19,8 @@ public class MedianTwoArray {
 
     int[] inputArr1 = {1,8,6,2,5,4,8,3,7};
     int[] inputArr2 = {3, 5};
-  // System.out.println(" Median :: " + findMedianSortedArrays(inputArr1, inputArr2));
+    System.out.println(" Median :: " + findMedianSortedArrays(inputArr1, inputArr2));
 
-    System.out.println("Max Area :: " + maxArea(inputArr1));
   }
 
 

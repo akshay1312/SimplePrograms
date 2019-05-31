@@ -20,6 +20,24 @@ public class ReverseKGroup {
     System.out.println("");
     System.out.println("Reversed k group linked list ");
     list.printList(head);
+    System.out.println("");
+
+    ReverseKGroup list1 = new ReverseKGroup();
+    list1.head = new Node(5);
+    list1.head.next = new Node(6);
+    list1.head.next.next = new Node(15);
+    list1.head.next.next.next = new Node(14);
+    list1.head.next.next.next.next = new Node(12);
+    list1.head.next.next.next.next.next = new Node(18);
+    list1.head.next.next.next.next.next.next = new Node(25);
+    System.out.println("Given Linked list 1");
+    list.printList(head);
+    System.out.println("");
+    head = list.reverseKGroup(head, 3, 5);
+    System.out.println("");
+    System.out.println("Reversed k group linked list 1 ");
+    list.printList(head);
+
   }
 
   /* Function to reverse the linked list */
@@ -97,6 +115,70 @@ public class ReverseKGroup {
       data = d;
       next = null;
     }
+  }
+
+
+  private Node reverseKGroup(Node head, int m, int n) {
+    Node current = head;
+    Node prev = head;
+    Node last = null;
+    Node end = head;
+    int count = 1;
+    while(prev != null && count < m-1) {
+      prev = prev.next;
+      count++;
+    }
+    current = prev.next;
+    System.out.println("Prev :: " + prev.data);
+    System.out.println("Current :: " + current.data);
+    int ending = 1;
+    while(end != null && ending <= n-1) {
+      end = end.next;
+      ending++;
+    }
+    last = end.next;
+    System.out.println("end :: " + end.data);
+    System.out.println("last :: " + last.data);
+    Node reverse = reverse(current, ending, count);
+    return head;
+  }
+
+  private Node reverse(Node node, int end, int start) {
+    Node prev = null;
+    Node startNode = node;
+    while(start != end) {
+      Node temp = node.next;
+      node.next = prev;
+      prev = node;
+      node = temp;
+      start++;
+    }
+    startNode.next = node.next;
+    node.next = prev;
+    return node;
+  }
+
+  private Node reverseKGroupStack(Node head, int m, int n) {
+    Node current = head;
+    Node prev = head;
+    Node last = null;
+    Node end = head;
+    int count = 1;
+    while(prev != null && count < m-1) {
+      prev = prev.next;
+      count++;
+    }
+    current = prev.next;
+    System.out.println("Prev :: " + prev.data);
+    System.out.println("Current :: " + current.data);
+    count = 1;
+    while(end != null && count <= n-1) {
+      end = end.next;
+      count++;
+    }
+    last = end.next;
+
+    return head;
   }
 
 }

@@ -11,6 +11,14 @@ public class checkNumberPalindrome {
 
     System.out.println("Please Enter a number : ");
     int givennumber = new Scanner(System.in).nextInt();
+    int reverse = reverseNumber(givennumber);
+    if (givennumber == reverse)
+      System.out.println("Result:Palindrome");
+    else
+      System.out.println("Result:Not Palindrome");
+  }
+
+  private static int reverseNumber(int givennumber) {
     int number = givennumber;
     int reverse = 0;
     while (number != 0) {
@@ -18,10 +26,7 @@ public class checkNumberPalindrome {
       reverse = reverse * 10 + remainder;
       number = number / 10;
     }
-    if (givennumber == reverse)
-      System.out.println("Result:Palindrome");
-    else
-      System.out.println("Result:Not Palindrome");
+    return reverse;
   }
 
 }

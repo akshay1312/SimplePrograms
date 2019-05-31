@@ -1,16 +1,17 @@
 package ArrayPrograms;
 
 import java.util.Arrays;
-import java.util.Map;
-import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Sum of array index of right,left,up,down and replace array index with result
  *
- * Input Array ::  [1, 2, 3] [4, 5, 6] [7, 8, 9]
+ * Input Array ::  [1, 2, 3]
+ *                 [4, 5, 6]
+ *                 [7, 8, 9]
  *
- * Output Array :: [6, 9, 8] [13, 20, 17] [12, 21, 14]
+ * Output Array :: [6, 9, 8]
+ *                 [13, 20, 17]
+ *                 [12, 21, 14]
  *
  * @author akshay Date 2019-03-23 20:42
  */
