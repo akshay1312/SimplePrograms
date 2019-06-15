@@ -44,18 +44,28 @@ public class FindNFromLast {
   private void printNthFromLast(Node head, int n) {
 
     Node p1 = head, p2 = head;
+    Node prev = null;
     int count = 0;
     while (count < n) {
       p2 = p2.next;
       count++;
     }
 
+    if(p2 == null) {
+      return;
+    }
+
     while (p2 != null) {
       p2 = p2.next;
+      prev = p1;
       p1 = p1.next;
     }
+
+    prev.next = p1.next;
+    p1.next = null;
     System.out.println();
     System.out.println("Last nth item ::" + p1.data);
+    printList(head);
 
   }
 
