@@ -12,8 +12,7 @@ public class TreeNode
     public TreeNode()
     {
         this.data = 0;
-        this.left = null;
-        this.right = null;
+        this.left = this.right = null;
     }
 
     public TreeNode(int data) {

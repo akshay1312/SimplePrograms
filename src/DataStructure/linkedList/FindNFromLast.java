@@ -64,7 +64,7 @@ public class FindNFromLast {
     prev.next = p1.next;
     p1.next = null;
     System.out.println();
-    System.out.println("Last nth item ::" + p1.data);
+    System.out.println("Last "+n+" item ::" + p1.data);
     printList(head);
 
   }

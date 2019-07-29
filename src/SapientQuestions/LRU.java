@@ -30,9 +30,7 @@ public class LRU {
   }
 
   public void put(int key, int value) {
-    if (hashMap.containsKey(key)) {
-      hashMap.remove(key);
-    }
+    hashMap.remove(key);
 
     if (hashMap.size() == capacity) {
       // eviction

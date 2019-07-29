@@ -10,31 +10,33 @@ public class SerializeDeserialize {
 
   // Encodes a tree to a single string.
   public String serialize(TreeNode root) {
-    if(root==null)
+    if (root == null) {
       return null;
+    }
 
     Stack<TreeNode> stack = new Stack<>();
     stack.push(root);
     StringBuilder sb = new StringBuilder();
 
-    while(!stack.isEmpty()){
+    while (!stack.isEmpty()) {
       TreeNode h = stack.pop();
-      if(h!=null){
-        sb.append(h.data+",");
+      if (h != null) {
+        sb.append(h.data + ",");
         stack.push(h.right);
         stack.push(h.left);
-      }else{
+      } else {
         sb.append("#,");
       }
     }
 
-    return sb.toString().substring(0, sb.length()-1);
+    return sb.toString().substring(0, sb.length() - 1);
   }
 
   // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
-    if(data == null)
+    if (data == null) {
       return null;
+    }
 
     int[] t = {0};
     String[] arr = data.split(",");
@@ -42,16 +44,18 @@ public class SerializeDeserialize {
     return helper(arr, t);
   }
 
-  public TreeNode helper(String[] arr, int[] t){
-    if(arr[t[0]].equals("#")){
+  public TreeNode helper(String[] arr, int[] t) {
+    if (arr[t[0]].equals("#")) {
       return null;
     }
-
+    String s = null;
+    Character ch = s.charAt(0);
+    Character.getNumericValue(ch);
     TreeNode root = new TreeNode(Integer.parseInt(arr[t[0]]));
 
-    t[0]=t[0]+1;
+    t[0] = t[0] + 1;
     root.left = helper(arr, t);
-    t[0]=t[0]+1;
+    t[0] = t[0] + 1;
     root.right = helper(arr, t);
 
     return root;

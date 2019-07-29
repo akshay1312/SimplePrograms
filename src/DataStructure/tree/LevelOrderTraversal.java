@@ -22,6 +22,7 @@ public class LevelOrderTraversal {
 
     List<List<Integer>> lists = levelOrder(treeNode);
     System.out.println("Result :: " + lists.toString());
+    System.out.println("height :: " + height(treeNode));
 
   }
 
@@ -48,6 +49,26 @@ public class LevelOrderTraversal {
       ans.add(subList);
     }
     return ans;
+  }
+
+  /* Compute the "height" of a tree -- the number of
+    nodes along the longest path from the root node
+    down to the farthest leaf node.*/
+  static int height(TreeNode root)
+  {
+    if (root == null)
+      return 0;
+    else
+    {
+      /* compute  height of each subtree */
+      int lheight = height(root.left);
+      int rheight = height(root.right);
+
+      /* use the larger one */
+      if (lheight > rheight)
+        return(lheight+1);
+      else return(rheight+1);
+    }
   }
 
 }

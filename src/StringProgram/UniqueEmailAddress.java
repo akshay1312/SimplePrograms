@@ -46,7 +46,7 @@ public class UniqueEmailAddress {
       }
       addresses.add(sb.toString());
     }
-
+    System.out.println(addresses.toString());
     return addresses.size();
   }
 
