@@ -1,4 +1,4 @@
-package JavaPrograms;
+package StringProgram;
 
 /**
  * Created by Akshay1312 on 11/13/2015.

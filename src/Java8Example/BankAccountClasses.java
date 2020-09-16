@@ -31,15 +31,12 @@ class BankAccountClasses {
   }
 
   static class SavingsAccount extends BankAccount {
-
     SavingsAccount(String currency, int units) {
       super(currency, units, AccountType.SAVING);
     }
-
   }
 
   static class CheckingAccount extends BankAccount {
-
     CheckingAccount(String currency, int units) {
       super(currency, units, AccountType.CHECKING);
     }
@@ -47,8 +44,7 @@ class BankAccountClasses {
 
   static class BrokerageAccount extends BankAccount {
 
-    BrokerageAccount(String currency,
-        int units) {
+    BrokerageAccount(String currency, int units) {
       super(currency, units, AccountType.BROKERAGE);
     }
   }

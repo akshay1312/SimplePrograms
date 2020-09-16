@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
  */
 public class UBSL2Program {
 
-  public static String roll(String s, int roll[]) {
+  public static String roll(String s, int[] roll) {
 
     int toRollLength = s.length();
     int each_character_roll[] = new int[s.length()];
@@ -43,7 +43,7 @@ public class UBSL2Program {
   // Driver code
   public static void main(String[] args) {
     String s = "geeks";
-    int k[] = {1, 2, 5};
+    int[] k = {1, 2, 5};
     System.out.println(roll(s, k));
   }
 }

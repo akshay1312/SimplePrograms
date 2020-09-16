@@ -3,7 +3,7 @@ package ArrayPrograms;
 /**
  * @author akshay Date 2019-05-19 09:36
  */
-public class RemoveFromSoretedArray {
+public class RemoveDuplicateFromSortedArray {
 
   public static void main(String a[]) {
 

@@ -13,7 +13,7 @@ public class ConsecutiveNum {
 
 
   public static void main(String args[]) {
-    int num = 250;
+    int num = 15;
 
     long temp, i, j, count = 0;
     long limit = (num / 2);

@@ -62,24 +62,5 @@ public class MedianTwoArray {
     }
   }
 
-  public static int maxArea(int[] height) {
-    int max = 0;
-    int secondMax = 0;
-    int result = 0;
-    for(int i = 0; i< height.length; i++) {
-      if(height[i] > max) {
-        secondMax = max;
-        max = height[i];
-      }
-      if(height[i] < max && height[i] > secondMax) {
-        secondMax = height[i];
-      }
-    }
 
-    if(max >= secondMax) {
-      result = secondMax * secondMax;
-    }
-
-    return result;
-  }
 }
