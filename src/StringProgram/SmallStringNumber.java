@@ -53,7 +53,7 @@ public class SmallStringNumber {
     if(index < str.length() - 2) {
       newStr += str.substring(index+1);
     }
-    return generateLowestNumber(newStr, num -1);
+    return generateLowestNumber2(newStr, num -1);
   }
 
 

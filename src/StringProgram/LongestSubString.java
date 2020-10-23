@@ -14,8 +14,8 @@ public class LongestSubString {
 
 
   public static void main(String[] args) {
-    int i = lengthOfLongestSubstring("dvdf");
-    i = lengthOfLongestSubstring1("dvdf");
+    //int i = lengthOfLongestSubstring("dvdf");
+    int i = lengthOfLongestSubstring2("dabbcabcd");
     System.out.println("length :: " + i);
   }
 
@@ -58,4 +58,21 @@ public class LongestSubString {
     return  length;
   }
 
+  static int lengthOfLongestSubstring2(String s) {
+    Map<Character, Integer> hashmap = new HashMap();
+    int length = 0;
+    StringBuffer sb = new StringBuffer();
+    for(int i =0; i<s.length(); i++) {
+      if(!hashmap.containsKey(s.charAt(i))) {
+        hashmap.put(s.charAt(i), i);
+        sb = sb.append(s.charAt(i));
+      } else {
+        length = Math.max(sb.length(), length);
+        sb = new StringBuffer();
+        i = hashmap.get(s.charAt(i));
+        hashmap.remove(s.charAt(i));
+      }
+    }
+    return  length;
+  }
 }

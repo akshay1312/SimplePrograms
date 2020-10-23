@@ -1,4 +1,4 @@
-package JavaPrograms;
+package ArrayPrograms;
 
 /**
  * Problem Statement :

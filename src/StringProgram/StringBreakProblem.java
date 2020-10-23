@@ -13,7 +13,6 @@ public class StringBreakProblem {
     String test = "AABBBCCAAACCB";
     char[] charArray = test.toCharArray();
     Node head = null;
-    char[] tempStore = new char[charArray.length];
     for (int i = 0; i > charArray.length; i++) {
       Node node = new Node(charArray[i], null);
       Node current = head;

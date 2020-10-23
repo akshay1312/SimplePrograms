@@ -35,6 +35,7 @@ public class FindNFromLast {
     list.head.next.next.next = new FindNFromLast.Node(44);
     list.head.next.next.next.next = new FindNFromLast.Node(20);
     list.head.next.next.next.next.next = new FindNFromLast.Node(12);
+    list.head.next.next.next.next.next.next = new FindNFromLast.Node(78);
 
     System.out.println("Given Linked list");
     list.printList(head);
@@ -61,10 +62,11 @@ public class FindNFromLast {
       p1 = p1.next;
     }
 
+    System.out.println("Last "+n+" item ::" + p1.data);
     prev.next = p1.next;
     p1.next = null;
     System.out.println();
-    System.out.println("Last "+n+" item ::" + p1.data);
+    System.out.println("Remove N item :: ");
     printList(head);
 
   }

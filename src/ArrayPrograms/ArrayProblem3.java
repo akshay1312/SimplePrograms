@@ -1,4 +1,4 @@
-package JavaPrograms;
+package ArrayPrograms;
 
 /**
  * aabbbcc => a2b3c2
@@ -30,7 +30,7 @@ public class ArrayProblem3 {
       if(count > 1) {
         i = i + (count - 1);
         sb.append(c).append(count);
-      }else {
+      } else {
         sb.append(c);
       }
       count = 0;

@@ -1,4 +1,4 @@
-package JavaPrograms;
+package ArrayPrograms;
 
 import java.util.ArrayList;
 import java.util.Collections;
