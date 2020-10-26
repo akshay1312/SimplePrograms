@@ -22,12 +22,12 @@ public class LongestSubString {
   static int lengthOfLongestSubstring(String s) {
     char[] input = s.toCharArray();
     Map<Character, Integer> hashmap = new HashMap();
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     String result = "";
     for (char c : input) {
       if (!hashmap.containsKey(c)) {
         hashmap.put(c, 1);
-        sb = sb.append(c);
+        sb.append(c);
       } else {
         if (result.length() < sb.toString().length()) {
           result = sb.toString();

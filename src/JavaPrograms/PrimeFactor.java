@@ -29,6 +29,6 @@ public class PrimeFactor {
     }
 
     if (number > 2)
-      System.out.print(number);
+      System.out.println(number);
   }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Stack;
 
-class CandidateSolution {
+class ReserveMeetingRoom {
 
   public static void main(String[] args) throws IOException {
 
@@ -22,7 +22,7 @@ class CandidateSolution {
     startTime.add(new Long[]{1597588152l, 1597591752l});
     startTime.add(new Long[]{1597588152l, 1597591752l});
 
-    CandidateSolution solution = new CandidateSolution();
+    ReserveMeetingRoom solution = new ReserveMeetingRoom();
     for (Long[] time : startTime) {
       int result = solution.reserveRoom(time[0], time[1]);
       System.out.println("Room Number :: "+ result);
@@ -33,7 +33,7 @@ class CandidateSolution {
   private Stack<Integer> freeRooms;
   private PriorityQueue<RoomAllocation> bookedRooms;
 
-  CandidateSolution() {
+  ReserveMeetingRoom() {
     freeRooms = new Stack<>();
     bookedRooms = new PriorityQueue<>((o1, o2) -> {
       if (o1.end < o2.end) {
