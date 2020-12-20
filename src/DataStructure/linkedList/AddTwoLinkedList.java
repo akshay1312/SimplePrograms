@@ -1,6 +1,5 @@
 package DataStructure.linkedList;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 /**

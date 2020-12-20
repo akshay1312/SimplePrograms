@@ -32,6 +32,14 @@ public class ReverseLinkedList {
     return node;
   }
 
+  public Node reverse2(Node head) {
+    if (head == null || head.next == null) return head;
+    Node temp = reverse2(head.next);
+    head.next.next = head;
+    head.next = null;
+    return temp;
+  }
+
   // prints content of double linked list
   void printList(Node node) {
     while (node != null) {

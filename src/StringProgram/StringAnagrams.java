@@ -9,11 +9,24 @@ import java.util.HashMap;
 public class StringAnagrams {
 
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     System.out.println("result :: " + isAnagram("anagram", "nagaram"));
     System.out.println("result :: " + isAnagram("rat", "car"));
+    Helper h = new Helper();
+    int data = 2;
+    h.bump(data);
+    System.out.println(h.data + " " + data);
   }
 
+  static class Helper {
+
+    private int data = 5;
+
+    public void bump(int inc) {
+      inc++;
+      data = data + inc;
+    }
+  }
 
   public static boolean isAnagram(String s, String t) {
     HashMap<Character, Integer> smap = new HashMap<>();

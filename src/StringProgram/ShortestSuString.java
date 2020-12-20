@@ -29,8 +29,8 @@ public class ShortestSuString {
 
     // Track every char and its number of occurences
     Map<Character, Integer> map = new HashMap<>();
-    for (int k = 0; k < alen; k++) {
-      map.put(arr[k], 0);
+    for (char c : arr) {
+      map.put(c, 0);
     }
 
     while (i < slen && j < slen) {
