@@ -28,13 +28,11 @@ public class Java8Example {
         .collect(Collectors.toList()); // collecting as list
     System.out.println(productPriceList2);
 
-
-
-    Consumer<Namer> printit = e -> System.out.println(e.getFn() + " "+ e.getLn());
+    Consumer<Namer> printit = e -> System.out.println(e.getFn() + " " + e.getLn());
     List<Namer> names = new ArrayList<>(Arrays.asList(
-        new Namer("Harry","Smith"), new Namer("Joe","Smith"),
-        new Namer("Marry","Jane"), new Namer("Jane","Doe"),
-        new Namer("Harry","Homewoner"))
+        new Namer("Harry", "Smith"), new Namer("Joe", "Smith"),
+        new Namer("Marry", "Jane"), new Namer("Jane", "Doe"),
+        new Namer("Harry", "Homewoner"))
     );
 
     Comparator<Namer> groupBy = Comparator.comparing(Namer::getFn);
@@ -47,31 +45,30 @@ public class Java8Example {
     names.removeIf(e -> e.getFn().equals("Marry"));
     names.forEach(printit);*/
 
+    List<Integer> inputList = new ArrayList<>();
+    inputList.add(1);
+    inputList.add(2);
+    inputList.add(2);
+    inputList.add(3);
+    inputList.add(4);
+    inputList.add(5);
+    inputList.add(5);
 
-
-   List<Integer> inputList = new ArrayList<>();
-   inputList.add(1);
-   inputList.add(2);
-   inputList.add(2);
-   inputList.add(3);
-   inputList.add(4);
-   inputList.add(5);
-   inputList.add(5);
-
-   // remove duplicate
+    // remove duplicate
     List<Integer> collect = inputList.stream().distinct().collect(Collectors.toList());
 
-    System.out.println("result 1 : " + collect );
+    System.out.println("result 1 : " + collect);
 
-   for(int i =0 ; i<collect.size(); i++) {
-     collect.remove(i);
-   }
-   System.out.println("result 2: " + collect );
+    for (int i = 0; i < collect.size(); i++) {
+      collect.remove(i);
+    }
+    System.out.println("result 2: " + collect);
 
   }
 }
 
 class Product {
+
   int id;
   String name;
   float price;
