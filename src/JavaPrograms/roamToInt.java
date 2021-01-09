@@ -1,5 +1,7 @@
 package JavaPrograms;
 
+import javafx.util.Pair;
+
 /**
  * Created by apitale on 2018-04-22.
  */

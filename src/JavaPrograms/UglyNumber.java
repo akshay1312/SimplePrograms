@@ -18,7 +18,7 @@ public class UglyNumber {
   public static int nthUglyNumber(int n) {
 
     int i, count = 1;
-      System.out.println("Count :: " + count + "i:: " + 1);
+      System.out.println("Count :: " + count + " i:: " + 1);
     if (n == count) {
       return count;
     }
@@ -26,7 +26,7 @@ public class UglyNumber {
       boolean isUgly = checkUgly(i);
       if (isUgly) {
         count = count + 1;
-        System.out.println("Count :: " + count + "i:: " + i);
+        System.out.println("Count :: " + count + " i :: " + i);
         if (count == n) {
           break;
         }

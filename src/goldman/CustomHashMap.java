@@ -70,8 +70,7 @@ public class CustomHashMap<K, V> {
         while (e.next != null) {
           e = e.next;
         }
-        Entry entryInOldBucket = new Entry(k, v);
-        e.next = entryInOldBucket;
+        e.next = new Entry(k, v);
       }
     } else {
       // create new bucket for new element in the map.
