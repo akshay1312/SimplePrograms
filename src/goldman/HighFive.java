@@ -47,6 +47,7 @@ public class HighFive {
     input[10][0] = 2;
     input[10][1] = 97;
     int[][] output = highFive1(input);
+    System.out.println("Result ::" + Arrays.deepToString(output));
   }
 
   public static int[][] highFive(int[][] items) {

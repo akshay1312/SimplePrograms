@@ -1,12 +1,13 @@
 package DataStructure.linkedList;
 
+import java.util.PriorityQueue;
+
 /**
  * Created by apitale on 2018-04-09.
  */
-public class MergeLinkedList {
+public class MergeKLinkedList {
 
-  Node head;  // head of list
-  static Node a, b;
+  static Node a, b, c;
 
   /* Node Class */
   static class Node {
@@ -23,8 +24,8 @@ public class MergeLinkedList {
 
   public static void main(String args[])
   {
-    MergeLinkedList list = new MergeLinkedList();
-    Node result = null;
+    MergeKLinkedList list = new MergeKLinkedList();
+    Node result;
 
         /*Let us create two sorted linked lists to test
          the above functions. Created lists shall be
@@ -38,20 +39,70 @@ public class MergeLinkedList {
     list.b.next = new Node(3);
     list.b.next.next = new Node(20);
 
+    list.c = new Node(1);
+    list.c.next = new Node(7);
+    list.c.next.next = new Node(9);
+
     System.out.println("List a before merge :");
     list.printlist(a);
     System.out.println("");
     System.out.println("List b before merge :");
     list.printlist(b);
+    System.out.println("");
+    System.out.println("List c before merge :");
+    list.printlist(c);
+
 
     // merge two sorted linkedlist in decreasing order
     //result = list.sortedmerge(a, b);
-    result = list.sortedmerge2(a, b);
+    Node[] arrayList = new Node[]{a,b,c};
+   // result = list.mergeKList(arrayList);
+    result = list.mergeKLists2(arrayList);
     System.out.println("");
     System.out.println("Merged linked list : ");
     list.printlist(result);
   }
 
+  private Node mergeKList(Node[] arrayList) {
+    int k = arrayList.length;
+    if(k == 0) {
+      return null;
+    }
+
+    if(k == 1) {
+      return arrayList[0];
+    }
+
+    int n = 0;
+    Node a = arrayList[0], b = arrayList[1];
+    for (int i = 1; i<k; i++) {
+      a = sortedmerge2(a, arrayList[i]);
+    }
+
+    return a;
+  }
+
+  public Node mergeKLists2(Node[] lists) {
+
+    PriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> a.data - b.data);
+
+    for(Node node : lists){
+      while(node != null){
+        pq.add(node);
+        node = node.next;
+      }
+    }
+
+    Node root = new Node(-1);
+    Node pointer = root;
+
+    while(!pq.isEmpty()){
+      pointer.next = new Node(-1);
+      pointer = pointer.next;
+      pointer.data = pq.poll().data;
+    }
+    return root.next;
+  }
   // merge without recursion
   private Node sortedmerge2(Node a, Node b) {
     Node preHead = new Node(-1);
